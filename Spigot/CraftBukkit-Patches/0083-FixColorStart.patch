@@ -1,0 +1,30 @@
+From d99341318bf60df6db4ef0256d2c4ae36cedf4e4 Mon Sep 17 00:00:00 2001
+From: Rafael Mendes Siqueira <rms-aps@hotmail.com>
+Date: Sat, 31 May 2025 22:09:30 -0300
+Subject: [PATCH] FixColorStart
+
+
+diff --git a/src/main/java/org/bukkit/craftbukkit/Main.java b/src/main/java/org/bukkit/craftbukkit/Main.java
+index 3ec329119..0c40f980c 100644
+--- a/src/main/java/org/bukkit/craftbukkit/Main.java
++++ b/src/main/java/org/bukkit/craftbukkit/Main.java
+@@ -203,11 +203,12 @@ public class Main {
+ 
+                     Calendar deadline = Calendar.getInstance();
+                     deadline.add(Calendar.DAY_OF_YEAR, -21);
++
+                     if (buildDate.before(deadline.getTime())) {
+-                        System.err.println("*** Error, this build is outdated ***");
+-                        System.err.println("*** Please download a new build as per instructions from https://www.spigotmc.org/go/outdated-spigot ***");
+-                        System.err.println("*** Server will start in 20 seconds ***");
+-                        Thread.sleep(TimeUnit.SECONDS.toMillis(20));
++                        System.err.println("\u001B[31m*** Erro, esta versão está desatualizada ***\u001B[0m");
++                        System.err.println("\u001B[31m*** Por favor, baixe uma nova versão conforme as instruções em \u001B[36mhttps://www.spigotmc.org/go/outdated-spigot\u001B[31m ***\u001B[0m");
++                        System.err.println("\u001B[32m*** SERVIDOR LIGANDO ***\u001B[0m");
++                        // Thread.sleep(TimeUnit.SECONDS.toMillis(20));
+                     }
+                 }
+ 
+-- 
+2.49.0.windows.1
+

@@ -1,0 +1,62 @@
+From 1828e1284e85984ed3475d0f761794d2bc883cb3 Mon Sep 17 00:00:00 2001
+From: Rafael Mendes Siqueira <rms-aps@hotmail.com>
+Date: Sat, 31 May 2025 22:02:21 -0300
+Subject: [PATCH] EnderChestPlus
+
+
+diff --git a/src/main/java/net/minecraft/world/inventory/InventoryEnderChest.java b/src/main/java/net/minecraft/world/inventory/InventoryEnderChest.java
+index c55f908d3..4cf3fb88f 100644
+--- a/src/main/java/net/minecraft/world/inventory/InventoryEnderChest.java
++++ b/src/main/java/net/minecraft/world/inventory/InventoryEnderChest.java
+@@ -32,7 +32,7 @@ public class InventoryEnderChest extends InventorySubcontainer {
+     }
+ 
+     public InventoryEnderChest(EntityHuman owner) {
+-        super(27);
++        super(54);
+         this.owner = owner;
+         // CraftBukkit end
+     }
+diff --git a/src/main/java/org/spigotmc/CalendarioAPI.java b/src/main/java/org/spigotmc/CalendarioAPI.java
+new file mode 100644
+index 000000000..0248791b2
+--- /dev/null
++++ b/src/main/java/org/spigotmc/CalendarioAPI.java
+@@ -0,0 +1,4 @@
++package org.spigotmc;
++
++public class CalendarioAPI {
++}
+diff --git a/src/main/java/org/spigotmc/LagAPI.java b/src/main/java/org/spigotmc/LagAPI.java
+new file mode 100644
+index 000000000..ac1dc4c3b
+--- /dev/null
++++ b/src/main/java/org/spigotmc/LagAPI.java
+@@ -0,0 +1,4 @@
++package org.spigotmc;
++
++public class LagAPI {
++}
+diff --git a/src/main/java/org/spigotmc/NumberUtil.java b/src/main/java/org/spigotmc/NumberUtil.java
+new file mode 100644
+index 000000000..5de9eb514
+--- /dev/null
++++ b/src/main/java/org/spigotmc/NumberUtil.java
+@@ -0,0 +1,4 @@
++package org.spigotmc;
++
++public class NumberUtil {
++}
+diff --git a/src/main/java/org/spigotmc/TXT.java b/src/main/java/org/spigotmc/TXT.java
+new file mode 100644
+index 000000000..16a73cbe4
+--- /dev/null
++++ b/src/main/java/org/spigotmc/TXT.java
+@@ -0,0 +1,4 @@
++package org.spigotmc;
++
++public class TXT {
++}
+-- 
+2.49.0.windows.1
+
